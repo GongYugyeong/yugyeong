@@ -1,8 +1,5 @@
-// src/app/[locale]/page.tsx
 import { Metadata } from 'next';
 
-import Header from '@/components/layout/Header';
-import Footer from '@/components/layout/Footer';
 import MainComponent from '@/components/home/MainComponent';
 
 import styles from '@/styles/common/Components.module.scss';
@@ -40,13 +37,10 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <div className={styles.page}>
-      <Header />
-
       <main className={styles.main}>
+        {/* headerRef를 MainComponent로 전달 */}
         <MainComponent />
       </main>
-
-      <Footer />
     </div>
   );
 }
